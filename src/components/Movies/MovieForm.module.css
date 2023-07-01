@@ -1,0 +1,61 @@
+
+.form{
+    padding: 20px;
+}
+
+.form input{
+    height: 25px;
+    width: 250px;
+}
+
+.form label{
+    display: block;
+    margin-top: 5px;
+}
+
+
+.form label span{
+    display: inline-block;
+    width: 30%;
+}
+
+.form button{
+    display: block;
+    width: 50%;
+    font-size: 15px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+/* form input responsiveness */
+
+
+@media all and (min-width: 901px) and (max-width: 1100px) {
+    .form input{
+        width: 230px;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 900px) {
+    .form input{
+        width: 200px;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 900px) {
+    .form input{
+        width: 200px;
+    }
+}
+
+@media all and (min-width: 481px) and (max-width: 767px) {
+    .form input{
+        width: 160px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .form input{
+        width: 120px;
+    }
+}

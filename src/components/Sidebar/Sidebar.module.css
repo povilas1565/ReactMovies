@@ -1,0 +1,176 @@
+/* * ----- variables ------ */
+:root{
+    --bg-color: #17171b;
+    --sidebar-color: #1a161f;
+    --input-color: #58585881;
+    --input-focus-color: #5858584d;
+}
+
+
+
+/* * Adding styles on sidebar */
+.sidebar{
+    background-color: var(--sidebar-color);
+    width: 25%;
+    display: grid;
+    grid-template-columns: 100%;
+    position: fixed;
+    top: 70px;
+    left: 0px;
+    height: calc(100dvh - 70px);
+    transition: all 0.5s;
+    z-index: 100;
+}
+
+
+/* * Adding styles on filter boxes */
+.filter{
+    /* border: 2px solid red; */
+    padding: 5%;
+    transition: all 0.5s;
+}
+
+
+/* * Adding styles on filter inputs and buttons */
+
+/** for sort buttons */
+.filter button{
+    background-color: var(--input-color);
+    font-size: 17px;
+    margin: 9px 2px;
+    padding: 4px 7px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+}
+
+/** when sort buttons selected*/
+.filter .bgRed{
+    background-color: red;
+}
+
+/* * For filter buttons */
+.filter input, .filter input ~ button, .filter select{
+    height: 35px;
+    background-color: var(--input-color);
+    color: #fff;
+    font-size: 15px;
+    padding: 0px 10px;
+    border: 1px solid black;
+    outline: none;
+}
+
+.filter input~button, .filter select{
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.filter input~button:focus{
+    background-color: var(--input-focus-color);
+}
+
+/* *Filter btn  */
+.filterBtn{
+    position: fixed;
+    bottom: 0px;
+    right: 30px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 17px;
+    padding: 4px 10px;
+    border: 1px solid grey;
+    z-index: 1000;
+    background-color: var(--sidebar-color);
+    cursor: pointer;
+}
+
+/* *active when user click on filter btn */
+.active .sidebar{
+    /* width: 0%; */
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/** responsiveness for different screen sizes */
+@media all and (min-width: 1013px) and (max-width: 1204px){
+
+    .sidebar{
+        width: 30%;
+    }
+}
+
+@media all and (min-width: 900px) and (max-width: 1012px){
+    .filter input{
+        width: 180px;
+    }
+    .sidebar{
+        width: 30%;
+    }
+
+    .sidebar .filter button{
+        font-size: 15px;
+    }
+}
+
+@media all and (min-width: 769px) and (max-width: 900px){
+    .filter input{
+        width: 70%
+    }
+    .sidebar{
+        width: 30%;
+    }
+    .sidebar .filter button{
+        font-size: 89%;
+    }
+}
+
+/** Tablet View */
+
+@media all and (min-width: 481px) and (max-width: 768px){
+    .sidebar{
+        width: 50%;
+        height: 100vh;
+    }
+    
+
+    .filter input{
+        width: 70%
+    }
+
+    .sidebar .filter button{
+        font-size: 11px;
+    }
+
+    .filterBtn{
+        display: block;
+    }
+}
+
+/* *Mobile View */
+
+@media all and (max-width: 480px){
+    
+    .sidebar{
+        width: 60%;
+    }
+
+    .filter input{
+        width: 60%
+    }
+    
+    .sidebar .filter button{
+        font-size: 11px;
+    }
+
+    .filter select{
+        width: 80%;
+    }
+
+    .filterBtn{
+        display: block;
+    }
+}

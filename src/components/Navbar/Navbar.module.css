@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100;9..144,800&family=Hind&display=swap');
+/* * ----- variables ------ */
+:root{
+    --bg-color: #17171b;
+    --navbar-color: #1a161f;
+}
+
+
+
+body{
+    background-color: var(--bg-color);
+    color: #fff;
+    font-family: Hind;
+}
+
+/* * ----- Navbar styling ------ */
+.navbar{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.157);
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--navbar-color);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 500;
+}
+
+.navbar > input {
+    width: 20%;
+    height: 30px;
+    background-color: #58585881;
+    color: #fff;
+    font-size: 17px;
+    padding-left: 10px;
+}
+
+
+@media all and (min-width: 481px) and (max-width: 768px){
+    .navbar > input{
+        width: 40%;
+    }
+}
+
+@media all and (max-width: 480px){
+    .navbar > input{
+        width: 50%;
+    }
+}

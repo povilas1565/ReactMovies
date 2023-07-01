@@ -1,0 +1,45 @@
+
+
+.movieCard{
+    position: relative;
+}
+
+.movieCard img{
+    border-radius: 15px;
+}
+
+
+.description{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    backdrop-filter: blur(6px);
+    width: 100%;
+    height: 33%;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.description p{
+    font-size: 17px; 
+    text-shadow: #FC0 1px 0 10px;
+}
+
+.description h2{
+    text-shadow: 1px 1px 2px rgb(170, 69, 69), 0 0 1em rgb(64, 64, 157), 0 0 0.2em blue;;
+}
+
+.separate{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+}
+
+.separate button{
+   /* width: 30px;  */
+   font-size: 20px;
+   cursor: pointer;
+}

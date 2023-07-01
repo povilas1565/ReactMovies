@@ -1,0 +1,48 @@
+
+.movieContainer{
+    display: flex;
+    margin: 100px 4% 0px 4%;
+}
+
+.descriptions > p, .movieContainer h1 {
+    margin-left: 25px;
+}
+
+.image > img{
+    width: 100%;
+}
+
+
+p > span:nth-child(1) {
+    display: inline-block;
+    width: 20%;
+}
+
+
+/*  resonsive styling for movie container  */
+
+
+@media all and (min-width: 481px) and (max-width: 768px){
+    
+    .movieContainer{
+        flex-direction: column;
+    }
+
+    .image{
+        width: fit-content;
+        margin: auto;
+    }
+    
+    p > span:nth-child(1)  {
+        width: 40%;
+    }
+}
+
+@media all and (max-width: 480px){
+    .movieContainer{
+        flex-direction: column;
+    }
+    p > span:nth-child(1)  {
+        width: 40%;
+    }
+}
